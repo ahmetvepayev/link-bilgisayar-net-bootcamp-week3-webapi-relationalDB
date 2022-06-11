@@ -31,4 +31,9 @@ public abstract class EntityEfCoreRepositoryBase<TEntity> : IEntityRepository<TE
         var deletedEntity = _context.Entry(entity);
         deletedEntity.State = EntityState.Deleted;
     }
+
+    public virtual TEntity GetById(int id)
+    {
+        return _context.Find<TEntity>(id);
+    }
 }
