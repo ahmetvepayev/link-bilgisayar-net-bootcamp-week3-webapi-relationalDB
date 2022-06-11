@@ -5,5 +5,8 @@ namespace Week3.DataAccess.Concrete;
 
 public class ProductFeatureDal : EntityEfCoreRepositoryBase<ProductFeature>, IProductFeatureDal
 {
-
+    public ProductFeatureDal(AppDbContext context)
+    {
+        _context = context;
+    }
 }

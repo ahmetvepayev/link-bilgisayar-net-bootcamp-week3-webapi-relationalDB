@@ -9,9 +9,4 @@ public class ProductDal : EntityEfCoreRepositoryBase<Product>, IProductDal
     {
         _context = context;
     }
-
-    public override Product GetById(int id)
-    {
-        return _context.Products.Find(id);
-    }
 }

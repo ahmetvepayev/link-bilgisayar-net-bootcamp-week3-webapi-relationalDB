@@ -9,9 +9,4 @@ public class CategoryDal : EntityEfCoreRepositoryBase<Category>, ICategoryDal
     {
         _context = context;
     }
-
-    public override Category GetById(int id)
-    {
-        return _context.Categories.Find(id);
-    }
 }
