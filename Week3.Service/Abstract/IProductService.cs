@@ -4,5 +4,5 @@ namespace Week3.Service.Abstract;
 
 public interface IProductService : IEntityService<Product>
 {
-
+    List<ProductFullModel> GetFullModels();
 }

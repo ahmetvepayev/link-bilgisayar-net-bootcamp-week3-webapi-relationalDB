@@ -50,4 +50,9 @@ public class ProductManager : IProductService
 
         return true;
     }
+
+    public List<ProductFullModel> GetFullModels()
+    {
+        return _productDal.GetFullModels();
+    }
 }

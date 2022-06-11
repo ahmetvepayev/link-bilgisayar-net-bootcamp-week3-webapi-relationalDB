@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore.Storage;
 using Week3.DataAccess.Abstract.UnitOfWork;
 
 namespace Week3.DataAccess.Concrete.UnitOfWork;
@@ -14,5 +15,10 @@ public class UnitOfWork : IUnitOfWork
     public void Commit()
     {
         _context.SaveChanges();
+    }
+
+    public IDbContextTransaction BeginTransaction()
+    {
+        return _context.Database.BeginTransaction();
     }
 }

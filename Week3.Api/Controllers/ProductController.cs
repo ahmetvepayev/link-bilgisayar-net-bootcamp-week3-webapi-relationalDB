@@ -29,6 +29,13 @@ public class ProductController : ControllerBase
         return Ok(_productService.GetById(id));
     }
 
+    /// <summary>Returns a different product model that references Products, Categories and ProductFeatures tables, using a stored procedure</summary>
+    [HttpGet("full")]
+    public IActionResult GetFullModels()
+    {
+        return Ok(_productService.GetFullModels());
+    }
+
     /// <summary>Adds the given product into the DB</summary>
     [HttpPost]
     public IActionResult Add([FromBody]Product product)
