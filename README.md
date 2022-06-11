@@ -1,3 +1,6 @@
+# SQL Scriptleri [Week3.DataAccess/TSQL_Scripts](Week3.DataAccess/TSQL_Scripts) klasörünün içinde
+
+
 # week-3-assignment
 
 # 3. Hafta Ödevler :
